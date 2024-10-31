@@ -1,0 +1,95 @@
+.container {
+    display: grid;
+    box-sizing: border-box;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-areas: 
+      "topbar topbar topbar topbar"
+      "nav nav nav nav"
+      "main main main main";
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+
+h2 {
+    display: inline;
+    margin-left: .25rem;
+    margin: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+}
+
+
+.topbar {
+    background-color: #7477bf;
+    color: white;
+    grid-area: topbar;
+    padding: 1rem .5rem;
+    
+}
+
+nav {
+    background-color: #4d4c72;
+    text-align: center;
+    padding: .5rem;
+    grid-area: nav;
+    margin-bottom: 1rem;
+}
+
+main {
+    grid-area: main;
+}
+
+
+
+.widget {
+    padding: .75rem;
+}
+
+span {
+    padding: .75rem;
+    border-radius: 50px;
+}
+
+span:hover {
+    background-color: #81c98f;
+    color: white;
+}
+
+.nav-icon {
+    fill: antiquewhite;
+    width: 38px;
+    margin: 0 .75rem;
+}
+
+.notification {
+    fill: antiquewhite;
+    width: 24px;
+}
+
+hr {
+    border: .75px solid lightgrey;
+}
+
+canvas {
+    margin: 1rem 0;
+}
+
+.profile {
+    width: 32px;
+    border-radius: 100%;
+}
+
+.vertical {
+    border:         none;
+    border-left:    1px solid white;
+    display: inline;
+    height:         100%;
+    width:          1px;  
+    margin: 0 .75rem;
+
+}
