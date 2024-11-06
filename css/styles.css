@@ -79,7 +79,6 @@ h3 {
 }
 
 .notifications-dropdown {
-  display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
@@ -186,6 +185,9 @@ nav {
   list-style: none;
   display: inline;
 }
+.traffic-nav-link a {
+  color: black;
+}
 
 .traffic-header {
   vertical-align: middle;
@@ -201,8 +203,9 @@ nav {
   cursor: pointer;
 }
 
-.traffic-nav li:active {
+.active {
   background-color: #81c98f;
+  color: white;
 }
 
 hr {
@@ -298,6 +301,11 @@ form input, form textarea {
   width: 100%;
 }
 
+form input:focus, form textarea:focus {
+  outline: none;
+  border: 2px solid #7477bf;
+}
+
 input::placeholder, textarea::placeholder {
   opacity: 0.5;
   color: #777;
@@ -310,6 +318,7 @@ button {
   border-radius: 8px;
   border: 2px solid #7477bf;
   width: 100%;
+  cursor: pointer;
 }
 
 
@@ -541,6 +550,7 @@ grid-template-areas:
   }
   .member {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: start;
     align-content: center;
     text-align: left;
@@ -577,9 +587,10 @@ grid-template-areas:
   .activity .member {
     display: grid;
     text-align: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "pic name arrow"
-    "pic date arrow";
+    "pic name name name arrow"
+    "pic date date date arrow";
   }
   .memberAct {
     width: 100%;
@@ -589,6 +600,7 @@ grid-template-areas:
     display: block;
     grid-area: arrow;
     align-self: center;
+    justify-self: end;
     font-size: 2rem;
     font-weight: 300;
     color: #7477bf;

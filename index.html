@@ -7,7 +7,7 @@
     <title>WebApp</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href= "./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
                             <circle class="circle-notification" r="15" cx="90" cy="15" fill="lightgreen"/>
                         </svg>
                     </a>
-                    <div class="notifications-dropdown">
+                    <div class="notifications-dropdown" style="display: none;">
                         <ul>
                             <li>You have a new message!</li>
                             <li>Send your first message!</li>
@@ -32,7 +32,7 @@
                         </ul>
                       </div>
                     <hr class="vertical">
-                    <img class="profile" src="./images/member-1.jpg">
+                    <img class="profile" alt="Profile Picture" src="./images/member-1.jpg">
                     <span class="user-name">Student Name</span>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <ul class="traffic-nav">
                         <li class="traffic-nav-link">Hourly</li>
                         <li class="traffic-nav-link">Daily</li>
-                        <li class="traffic-nav-link">Weekly</li>
+                        <li class="traffic-nav-link active">Weekly</li>
                         <li class="traffic-nav-link">Monthly</li>
                     </ul>
                 </div>   
@@ -151,7 +151,7 @@
             <section class="widget members">
                 <h3>New Members</h3>
                 <div class="member">
-                    <img class="memberPic" src="images/member-1.jpg">
+                    <img class="memberPic" alt="Victoria Chambers" src="images/member-1.jpg">
                     <div class="memberText">
                         <p class="memberName">Victoria Chambes</p>
                         <p class="memberMail"><a href="#">victoria.chambers80@example.com</a></p>                        
@@ -160,28 +160,28 @@
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-2.jpg">
+                    <img class="memberPic" alt="Dale Byrd" src="images/member-2.jpg">
                     <div class="memberText">
-                        <p class="memberName">Victoria Chambes</p>
-                        <p class="memberMail"><a href="#">victoria.chambers80@example.com</a></p>                        
+                        <p class="memberName">Dale Byrd</p>
+                        <p class="memberMail"><a href="#">dale.byrd52@example.com</a></p>                        
                     </div>
                     <p class="memberDate">10/15/20</p>
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-3.jpg">
+                    <img class="memberPic" alt="Dawn Wood" src="images/member-3.jpg">
                     <div class="memberText">
-                        <p class="memberName">Victoria Chambes</p>
-                        <p class="memberMail"><a href="#">victoria.chambers80@example.com</a></p>                        
+                        <p class="memberName">Dawn Wood</p>
+                        <p class="memberMail"><a href="#">dawn.wood16@example.com</a></p>                        
                     </div>
                     <p class="memberDate">10/15/20</p>
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-4.jpg">
+                    <img class="memberPic" alt="Dan Oliver" src="images/member-4.jpg">
                     <div class="memberText">
-                        <p class="memberName">Victoria Chambes</p>
-                        <p class="memberMail"><a href="#">victoria.chambers80@example.com</a></p>                        
+                        <p class="memberName">Dan Oliver</p>
+                        <p class="memberMail"><a href="#">dan.oliver82@example.com</a></p>                        
                     </div>
                     <p class="memberDate">10/15/20</p>
                 </div>
@@ -191,30 +191,30 @@
             <section class="widget activity">
                 <h3>Recent Activity</h3>
                 <div class="member">
-                    <img class="memberPic" src="images/member-1.jpg">
+                    <img class="memberPic" alt="Victoria Chambers" src="images/member-1.jpg">
                     <p class="memberAct">Victoria Chambers commented on <span class="bold">WebbApp's SEO Tips</span></p>
                     <p class="memberLastStatus">4 hours ago</p>
                     <p class="arrow">></p>
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-2.jpg">
-                    <p class="memberAct">Victoria Chambers commented on <span class="bold">WebbApp's SEO Tips</span></p>
-                    <p class="memberLastStatus">4 hours ago</p>
+                    <img class="memberPic" alt="Dale Byrd" src="images/member-2.jpg">
+                    <p class="memberAct">Dale Byrd liked the post <span class="bold">acebook's Changes for 2021</span></p>
+                    <p class="memberLastStatus">5 hours ago</p>
                     <p class="arrow">></p>
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-3.jpg">
-                    <p class="memberAct">Victoria Chambers commented on <span class="bold">WebbApp's SEO Tips</span></p>
-                    <p class="memberLastStatus">4 hours ago</p>
+                    <img class="memberPic" alt="Dawn Wood" src="images/member-3.jpg">
+                    <p class="memberAct">Dawn Wood commented on <span class="bold">Facebook's Changes for 2021</span></p>
+                    <p class="memberLastStatus">5 hours ago</p>
                     <p class="arrow">></p>
                 </div>
                 <hr>
                 <div class="member">
-                    <img class="memberPic" src="images/member-4.jpg">
-                    <p class="memberAct">Victoria Chambers commented on <span class="bold">WebbApp's SEO Tips</span></p>
-                    <p class="memberLastStatus">4 hours ago</p>
+                    <img class="memberPic" alt="Dan Oliver" src="images/member-4.jpg">
+                    <p class="memberAct">Dan Oliver posted <span class="bold">WebbApp's SEO Tips</span></p>
+                    <p class="memberLastStatus">1 day ago</p>
                     <p class="arrow">></p>
                 </div>
             </section>
@@ -223,8 +223,14 @@
             <section class="widget message">
                 <h3>Message User</h3>
                 <form>
-                    <input type="text" id="fname" name="fname" placeholder="Search for User">
+                    <input type="text" id="fname" name="fname" list="member-list" placeholder="Search for User">
                     <textarea id="message" name="message" rows="6" placeholder="Message for User"></textarea>
+                    <datalist id="member-list">
+                        <option value="Victoria Chambers"></option>
+                        <option value="Dale Byrd"></option>
+                        <option value="Dawn Wood"></option>
+                        <option value="Dan Oliver"></option>
+                      </datalist>
                     <button id="send">SEND</button>
                 </form> 
             </section>
@@ -236,7 +242,7 @@
                     <div class="switchRow first">
                         <span class="inst">Send Email Notifications</span>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="send-email">
                             <span class="slider round"></span>
                             <span>
                                 <span>On</span>
@@ -248,7 +254,7 @@
                     <div class="switchRow second">
                         <span class="inst">Set Profile to Public</span>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="public">
                             <span class="slider round"></span>
                             <span>
                                 <span>On</span>
@@ -264,7 +270,7 @@
                         <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                         <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                         <option value="-10:00">(GMT -10:00) Hawaii</option>
-                        <option value="-09:50">(GMT -9:30) Taiohae</option>
+                        <option value="-09:30">(GMT -9:30) Taiohae</option>
                         <option value="-09:00">(GMT -9:00) Alaska</option>
                         <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
                         <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
@@ -272,7 +278,7 @@
                         <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
                         <option value="-04:50">(GMT -4:30) Caracas</option>
                         <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
-                        <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                        <option value="-03:30">(GMT -3:30) Newfoundland</option>
                         <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
                         <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
                         <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
@@ -280,7 +286,7 @@
                         <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
                         <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
                         <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
-                        <option value="+03:50">(GMT +3:30) Tehran</option>
+                        <option value="+03:30">(GMT +3:30) Tehran</option>
                         <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
                         <option value="+04:50">(GMT +4:30) Kabul</option>
                         <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
@@ -303,7 +309,7 @@
                         <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
                     </select>
                     <div class="settings-buttons">
-                        <button class="save">SAVE</button>
+                        <button class="save" type="submit">SAVE</button>
                         <button class="cancel">CANCEL</button>
                     </div>
                         
