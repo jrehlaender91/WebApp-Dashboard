@@ -53,16 +53,11 @@ function setSelect() {
 	select.value = savedTimezone;
 	sendNotifications.checked = savedSendChecked;
 	setProfilePublic.checked = savedProfileChecked;
-
-	console.log("timezone: " + savedTimezone);
-	console.log("send: " + savedSendChecked);
-	console.log("profile: " + savedProfileChecked);
 }
 
 function getSettings() {
 	const select = localStorage.getItem('time');
 	if (select) {
-		console.log(JSON.parse(select));
 		return JSON.parse(select);
 	}
 	return [];
@@ -71,7 +66,7 @@ function getSettings() {
 
 // Alert banner listener
 alertBanner.innerHTML =
-	`<div class="alert-banner" id="alert">
+	`<div class="alert-banner">
     <span class="bold">Alert:</span> You have unread messages <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   </div>`;
 
