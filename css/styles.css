@@ -189,6 +189,7 @@ nav {
   border-radius: 50px;
   list-style: none;
   display: inline;
+  margin-left: 10px;
 }
 .traffic-nav-link a {
   color: black;
@@ -413,10 +414,6 @@ input:checked + .slider:before {
   padding: 0;
 }
 
-option[value=""][disabled] {
-  display: none;
-}
-
 select {
   color: #777;
   padding: 1rem;
@@ -529,9 +526,13 @@ grid-template-areas:
   .main-header {
     grid-column: 1 / span 3;
   }
-  .mobile, .activity, .settings {
+  .mobile {
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
+    padding-left: 1rem;
+  }
+ .activity, .settings {
+    border-top: 1px solid #ccc;
   }
  .socials, .daily, .members, .message {
     border-top: 1px solid #ccc;
@@ -621,6 +622,7 @@ grid-template-areas:
 @media  screen and (min-width: 1024px) {
   .members, .message  {
     grid-column: 1 /  2;
+    padding-right: 1rem;
   }
   .settings, .activity {
     grid-column: 2 /  4;
@@ -656,6 +658,10 @@ grid-template-areas:
   }
   .members .member:last-child, .activity .member:last-child{
     border: none;
+  }
+  .activity, .settings {
+    border-left: 1px solid #ccc;
+    padding-left: 1rem;
   }
 }
   

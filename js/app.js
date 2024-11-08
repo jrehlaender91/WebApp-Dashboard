@@ -11,6 +11,7 @@ const sendButton = document.getElementById("send");
 
 // Notifications variables
 const bell = document.querySelector(".notification");
+const bellArea = document.querySelector(".bell");
 const notification = document.querySelector(".notifications-dropdown");
 const circle = document.querySelector(".circle-notification");
 
@@ -40,19 +41,27 @@ save.addEventListener('click', () => {
 
 cancel.addEventListener('click', () => {
 	localStorage.clear();
+	sendNotifications.checked = false;
+	setProfilePublic.checked = false;
+	select.selectedIndex = 0;
 });
 
 setSelect();
 
 function setSelect() {
 	const settings = getSettings();
-	const savedProfileChecked = settings[settings.length - 1];
-	const savedSendChecked = settings[settings.length - 2];
-	const savedTimezone = settings[settings.length - 3];
 
-	select.value = savedTimezone;
-	sendNotifications.checked = savedSendChecked;
-	setProfilePublic.checked = savedProfileChecked;
+	if (settings.length > 0) {
+		const savedProfileChecked = settings[settings.length - 1];
+		const savedSendChecked = settings[settings.length - 2];
+		const savedTimezone = settings[settings.length - 3];
+
+		select.value = savedTimezone;
+		sendNotifications.checked = savedSendChecked;
+		setProfilePublic.checked = savedProfileChecked;
+	} else {
+		select.selectedIndex = 0;
+	}
 }
 
 function getSettings() {
@@ -147,22 +156,24 @@ chartOption.addEventListener('click', e => {
 	const element = e.target;
 	const list = chartOption.children;
 
-	for (let i = 0; i < list.length; i++) {
-		list[i].classList.remove("active");
-	}
+	if (element.nodeName === "LI" ) {
+		for (let i = 0; i < list.length; i++) {
+			list[i].classList.remove("active");
+		}
 
-	if (element.textContent === "Hourly") {
-		hourly(traffic);
-		element.classList.add("active");
-	} else if (element.textContent === "Daily") {
-		daily(traffic);
-		element.classList.add("active");
-	} else if (element.textContent === "Monthly") {
-		monthly(traffic);
-		element.classList.add("active");
-	} else {
-		weekly(traffic);
-		element.classList.add("active");
+		if (element.textContent === "Hourly") {
+			hourly(traffic);
+			element.classList.add("active");
+		} else if (element.textContent === "Daily") {
+			daily(traffic);
+			element.classList.add("active");
+		} else if (element.textContent === "Monthly") {
+			monthly(traffic);
+			element.classList.add("active");
+		} else {
+			weekly(traffic);
+			element.classList.add("active");
+		}
 	}
 });
 
@@ -275,3 +286,14 @@ let mobileChart = new Chart(pie, {
 	data: mobileData,
 	options: mobileOptions
 });
+
+bellArea.addEventListener('mouseenter', function (e) {
+	bell.classList.add('animate__swing');
+	bell.classList.add('animate__animated');
+	bell.classList.add('animate__fast'); 
+});
+bellArea.addEventListener('mouseleave', function () {
+	bell.classList.remove('animate__swing');
+	bell.classList.remove('animate__animated');
+	bell.classList.add('animate__fast'); 
+})
