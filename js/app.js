@@ -287,7 +287,7 @@ let mobileChart = new Chart(pie, {
 	options: mobileOptions
 });
 
-bellArea.addEventListener('mouseenter', function (e) {
+bellArea.addEventListener("mouseover", function (e) {
 	bell.classList.add('animate__swing');
 	bell.classList.add('animate__animated');
 	bell.classList.add('animate__fast'); 
